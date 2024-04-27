@@ -25,9 +25,6 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Copy Laravel application files
-COPY . .
-
 # Clone Laravel project from GitHub
 RUN git clone https://github.com/miusarname2/laravel-test-CRUD.git /var/www/html
 
